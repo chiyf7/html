@@ -1,71 +1,115 @@
-<DOCTYPE html>
-    <html>
-    <head>
-        <body style="background-color: whites;">
-            <h1 style="border:2px solidcolor black;"> Lorem Picsum</h1>
-            <p>The Lorem Ipsum for photos.</p>
-           <br><img src="https://picsum.photos/200/300">
-           <hr>
-          <strong><p style="text-align: center;"> Easy to use, stylish placeholders</p></strong>
-           <br>
-           <p style="text-align: center;">Just add your desired image size (width & height) after our URL, and you'll get a<br> random image.</p>
-           <p style="text-align: center;"><input box type="text" value="https://picsum.photos/200/300">
-           <p style="text-align: center;">To get a square image, just add the size.</p>
-           <p style="text-align: center;"><input type="text" value="https://picsum.photos/200">
-            <hr>
-            <h1 style="border:2px solidcolor black;">Specific Image</h1>
-            <p>Get a specific image by adding /id/{image} to the start of the url.</p>
-            <p style="text-align:left;" ><input link type="button" value="https://picsum.photos/id/237/200/300" > </p>
-            <p>You can find a list of all the images here.</p>
-            <img src="https://picsum.photos/id/237/200/300"
-           <b> <h1 style="text-align: right;"> Static Random Image</h1></b>
-           <p style="text-align: right;" >Get the same random image every time based on a seed, by adding <br>/seed/{seed} to the start of the url.</p>
-           <img src="https://picsum.photos/seed/picsum/200/300"
-           <hr>
-          <b> <h1 style="text-align: left;">Grayscale</h1></b>
-          <p>Get a grayscale image by appending ?grayscale to the end of the url.</p>
-          <p style="text-align: left;" ><input link type="button" value="https://picsum.photos/200/300?grayscale"></p>
-          <img src="https://picsum.photos/200/300?grayscale"
-          <hr>
-          <h1 style="text-align: right;">Blur</h1>
-          <p style="text-align: right;">Get a blurred image by appending ?blur to the end of the url.</p>
-          <p style="text-align: right;"><input link type="button" value="https://picsum.photos/200/300/?blur"> </p>
-          <p style="text-align: right;"> You can adjust the amount of blur by providing a number between <br> and 10.></p>
-          <p style="text-align: right;"><input link type="button" value="https://picsum.photos/200/300/?blur=2"></p>
-          <img src="https://picsum.photos/200/300/?blur=2"
-          <hr>
-          <h1 style="text-align: left;">Advanced Usage </h1>
-          <p style="text-align: left;">You may combine any of the options above.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Picsum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="main-header">
+        <h1 class="site-title">Lorem Picsum</h1>
+    </header>
 
-           <p style="text-align: left;">For example, to get a specific image that is grayscale and blurred.</p>
-           <p style="text-align: left;"><input link type="button" value="https://picsum.photos/id/870/200/300?grayscale&blur=2"></p>
-           <p style="text-align: left;">To request multiple images of the same size in your browser, add the <br>random query param to prevent the images from being cached:</p>
-           <p style="text-align: left;"><input link type="button" value=<img src="https://picsum.photos/200/300?random=1">
-            <img src="https://picsum.photos/200/300?random=2"></p>
-            <p style="text-align: left;">If you need a file ending, you can add .jpg to the end of the url.</p>
-            <p style="text-align: left;"><input link type="button" value="https://picsum.photos/200/300.jpg"</p>
-            <p style="text-align: left;">To get an image in the WebP format, you can add .webp to the end <br>of the url.</p>
-            <p style="text-align: left;"><input link type="button" value="https://picsum.photos/200/300.webp"</p>
-            <hr>
-            <p style="text-align: left;"><input link type="button" value="[
-                {
-                    "id": "0",
-                    "author": "Alejandro Escamillla",
-                    "width": 5616,
-                    "height": 3744,
-                    "url": "https://unsplash.com/...",
-                    "download_url": "https://picsum.photos/..."
-                }
-            ]"</p>
-           <br> 
-           <h1 style="text-align: center;"> Proudlyered by Fastly</h1>
-           <p style="text-align: center;">Created by David Marby & Nijiko Yonskai
-            <br>
-            Source
-            <br>
-            Having trouble? Poke @DMarby on Twitter
-            <br>
-            Images from Unsplash</p>
+    <section id="intro">
+        <p class="intro-text">The Lorem Ipsum for photos.</p>
+        <div class="image-container">
+            <img src="https://picsum.photos/200/300" alt="Random placeholder image">
+        </div>
+        <hr>
+        <p class="centered-text"><strong>Easy to use, stylish placeholders</strong></p>
+        <p class="centered-text">Just add your desired image size (width & height) after our URL, and you'll get a<br>random image.</p>
+        <p class="centered-text">
+            <input type="text" value="https://picsum.photos/200/300" readonly>
+        </p>
+        <p class="centered-text">To get a square image, just add the size.</p>
+        <p class="centered-text">
+            <input type="text" value="https://picsum.photos/200" readonly>
+        </p>
+        <hr>
+    </section>
 
-        </body>
-    </html>
+    <section id="specific-image">
+        <h2 class="section-title">Specific Image</h2>
+        <p>Get a specific image by adding /id/{image} to the start of the URL.</p>
+        <p>
+            <input type="button" value="https://picsum.photos/id/237/200/300">
+        </p>
+        <p>You can find a list of all the images here.</p>
+        <div class="image-container">
+            <img src="https://picsum.photos/id/237/200/300" alt="Specific placeholder image">
+        </div>
+    </section>
+
+    <section id="static-image">
+        <h2 class="section-title">Static Random Image</h2>
+        <p>Get the same random image every time based on a seed, by adding <br>/seed/{seed} to the start of the URL.</p>
+        <div class="image-container">
+            <img src="https://picsum.photos/seed/picsum/200/300" alt="Static placeholder image">
+        </div>
+    </section>
+
+    <section id="grayscale">
+        <h2 class="section-title">Grayscale</h2>
+        <p>Get a grayscale image by appending ?grayscale to the end of the URL.</p>
+        <p>
+            <input type="button" value="https://picsum.photos/200/300?grayscale">
+        </p>
+        <div class="image-container">
+            <img src="https://picsum.photos/200/300?grayscale" alt="Grayscale placeholder image">
+        </div>
+    </section>
+
+    <section id="blur">
+        <h2 class="section-title">Blur</h2>
+        <p>Get a blurred image by appending ?blur to the end of the URL.</p>
+        <p>
+            <input type="button" value="https://picsum.photos/200/300/?blur">
+        </p>
+        <p>You can adjust the amount of blur by providing a number between 1 and 10.</p>
+        <p>
+            <input type="button" value="https://picsum.photos/200/300/?blur=2">
+        </p>
+        <div class="image-container">
+            <img src="https://picsum.photos/200/300/?blur=2" alt="Blurred placeholder image">
+        </div>
+    </section>
+
+    <section id="advanced-usage">
+        <h2 class="section-title">Advanced Usage</h2>
+        <p>You may combine any of the options above.</p>
+        <p>For example, to get a specific image that is grayscale and blurred.</p>
+        <p>
+            <input type="button" value="https://picsum.photos/id/870/200/300?grayscale&blur=2">
+        </p>
+        <p>To request multiple images of the same size in your browser, add the random query param to prevent the images from being cached:</p>
+        <div class="image-container">
+            <img src="https://picsum.photos/200/300?random=1" alt="Random placeholder image 1">
+            <img src="https://picsum.photos/200/300?random=2" alt="Random placeholder image 2">
+        </div>
+        <p>If you need a file ending, you can add .jpg to the end of the URL.</p>
+        <p>
+            <input type="button" value="https://picsum.photos/200/300.jpg">
+        </p>
+        <p>To get an image in the WebP format, you can add .webp to the end of the URL.</p>
+        <p>
+            <input type="button" value="https://picsum.photos/200/300.webp">
+        </p>
+    </section>
+
+    <section id="json-output">
+        <h2 class="section-title">JSON Output</h2>
+        <p>
+            <input type="button" value='[{"id": "0", "author": "Alejandro Escamilla", "width": 5616, "height": 3744, "url": "https://unsplash.com/...", "download_url": "https://picsum.photos/..."}]'>
+        </p>
+    </section>
+
+    <footer id="footer">
+        <p class="centered-text">Proudly powered by Fastly</p>
+        <p class="centered-text">Created by David Marby & Nijiko Yonskai</p>
+        <p class="centered-text">Source</p>
+        <p class="centered-text">Having trouble? Poke @DMarby on Twitter</p>
+        <p class="centered-text">Images from Unsplash</p>
+    </footer>
+</body>
+</html>

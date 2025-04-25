@@ -1,4 +1,102 @@
-<head>
-<link rel="stylsheet" href="https://picsum.photos/200/300">
-</head>
-<p style="text-align:left">
+/* General Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header */
+#main-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.site-title {
+    font-size: 2.5em;
+    color: #333;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.8em;
+    margin: 25px 0 10px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* Text Styling */
+.intro-text,
+.centered-text {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.centered-text strong {
+    font-weight: bold;
+}
+
+/* Images */
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="button"] {
+    padding: 10px;
+    font-size: 1em;
+    margin: 10px 0;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    width: 90%;
+    max-width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="button"] {
+    background-color: #eee;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background-color: #ddd;
+}
+
+/* Footer */
+#footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+}
+
+hr {
+    margin: 30px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
